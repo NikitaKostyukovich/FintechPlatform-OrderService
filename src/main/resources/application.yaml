@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: OrderService
+  datasource:
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        default_batch_fetch_size: 20
+  liquibase:
+    change-log: classpath:db/changelog/db..changelog-master.yaml
+server:
+  port: 8083
+
+
+
+
+
+
